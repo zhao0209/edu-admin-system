@@ -107,3 +107,40 @@ npm start
 
 Скриншоты (примеры)
 (Добавьте скриншоты страницы входа, панели администратора, студенческой страницы, расписания, заявлений на отпуск)
+
+
+Сущность JPA (CourseEntity)
+java
+@Entity
+@Table(name = "courses")
+public class CourseEntity {
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String name;
+    private String teacher;
+    private int hours;
+    // getters/setters
+}
+React компонент переключения языка
+jsx
+const { t, toggleLanguage } = useLanguage();
+return <button onClick={toggleLanguage}>{t('lang_switch')}</button>;
+Запуск проекта
+Установить PostgreSQL 16, создать БД edu_admin.
+
+Открыть backend в IntelliJ IDEA, запустить ServerApplication.
+
+Открыть frontend в VS Code, выполнить:
+
+bash
+npm install
+npm start
+Перейти в браузере: http://localhost:3000
+
+Тестовый администратор: admin / 123456
+
+Заключение
+Разработана полнофункциональная система с ролевой моделью, CRUD-операциями и поддержкой двух языков. Готова к дальнейшему расширению.
+
+Скриншоты
+(Добавьте скриншоты страницы входа, панели администратора, студенческой страницы, расписания, заявлений на отпуск)

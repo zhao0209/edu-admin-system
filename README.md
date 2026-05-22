@@ -59,52 +59,56 @@
 
 ## Примеры кода
 
-```java
-# Контроллер аутентификации (Java)
+**Контроллер аутентификации (Java)**
 
-@PostMapping("/login")
-public Map<String, Object> login(@RequestBody Map<String, String> body) {
-    String username = body.get("username");
-    String password = body.get("password");
-    // проверка в БД ...
-    response.put("success", true);
-    response.put("role", user.getRole());
-    return response;
-}
+    @PostMapping("/login")
+    public Map<String, Object> login(@RequestBody Map<String, String> body) {
+        String username = body.get("username");
+        String password = body.get("password");
+        // проверка в БД ...
+        response.put("success", true);
+        response.put("role", user.getRole());
+        return response;
+    }
 
-# Сущность JPA (CourseEntity)
+**Сущность JPA (CourseEntity)**
 
-@Entity
-@Table(name = "courses")
-public class CourseEntity {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String name;
-    private String teacher;
-    private int hours;
-    // getters/setters
-}
+    @Entity
+    @Table(name = "courses")
+    public class CourseEntity {
+        @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+        private Long id;
+        private String name;
+        private String teacher;
+        private int hours;
+        // getters/setters
+    }
 
-# React компонент переключения языка
+**React компонент переключения языка**
 
-const { t, toggleLanguage } = useLanguage();
-return <button onClick={toggleLanguage}>{t('lang_switch')}</button>;
+    const { t, toggleLanguage } = useLanguage();
+    return <button onClick={toggleLanguage}>{t('lang_switch')}</button>;
 
-# Запуск проекта
+---
+
+## Запуск проекта
 
 1. Установить PostgreSQL 16, создать БД edu_admin.
 2. Открыть backend в IntelliJ IDEA, запустить ServerApplication.
 3. Открыть frontend в VS Code, выполнить:
-   npm install
-   npm start
+       npm install
+       npm start
 4. Перейти в браузере: http://localhost:3000
 5. Тестовый администратор: admin / 123456
 
-# Заключение
+---
+
+## Заключение
 
 Разработана полнофункциональная система с ролевой моделью, CRUD-операциями и поддержкой двух языков. Готова к дальнейшему расширению.
 
+---
 
-# Скриншоты
+## Скриншоты
 
 (Добавьте скриншоты страницы входа, панели администратора, студенческой страницы, расписания, заявлений на отпуск)

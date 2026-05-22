@@ -72,11 +72,8 @@ public Map<String, Object> login(@RequestBody Map<String, String> body) {
     return response;
 }
 
----
+# Сущность JPA (CourseEntity)
 
-### Сущность JPA (CourseEntity)
-
-```java
 @Entity
 @Table(name = "courses")
 public class CourseEntity {
@@ -88,11 +85,11 @@ public class CourseEntity {
     // getters/setters
 }
 
-React компонент переключения языка
-jsx
+# React компонент переключения языка
 const { t, toggleLanguage } = useLanguage();
 return <button onClick={toggleLanguage}>{t('lang_switch')}</button>;
-Запуск проекта
+
+# Запуск проекта
 Установить PostgreSQL 16, создать БД edu_admin.
 
 Открыть backend в IntelliJ IDEA, запустить ServerApplication.
@@ -106,8 +103,10 @@ npm start
 
 Тестовый администратор: admin / 123456
 
-Заключение
+# Заключение
 Разработана полнофункциональная система с ролевой моделью, CRUD-операциями и поддержкой двух языков. Готова к дальнейшему расширению.
 
-Скриншоты
+# Скриншоты
 (Добавьте скриншоты страницы входа, панели администратора, студенческой страницы, расписания, заявлений на отпуск)
+
+

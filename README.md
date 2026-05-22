@@ -70,11 +70,13 @@ public Map<String, Object> login(@RequestBody Map<String, String> body) {
     response.put("success", true);
     response.put("role", user.getRole());
     return response;
- // ...
 }
 
-Сущность JPA (CourseEntity)
-java
+---
+
+### Сущность JPA (CourseEntity)
+
+```java
 @Entity
 @Table(name = "courses")
 public class CourseEntity {
@@ -84,13 +86,12 @@ public class CourseEntity {
     private String teacher;
     private int hours;
     // getters/setters
- // ...
 }
+
 React компонент переключения языка
 jsx
 const { t, toggleLanguage } = useLanguage();
 return <button onClick={toggleLanguage}>{t('lang_switch')}</button>;
-
 Запуск проекта
 Установить PostgreSQL 16, создать БД edu_admin.
 
